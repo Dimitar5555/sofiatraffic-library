@@ -1,3 +1,16 @@
+export const primary_route_types = [
+    'metro',
+    'tram',
+    'trolley',
+    'bus'
+];
+
+export const secondary_route_types = [
+    'temporary',
+    'night',
+    'school'
+];
+
 export function determine_route_colour(route) {
     if(route.is_active === false) {
         return 'bg-secondary';
