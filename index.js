@@ -12,14 +12,20 @@ export const secondary_route_types = [
 ];
 
 export function determine_route_colour(route) {
-    if(route.is_active === false) {
-        return 'bg-secondary';
+    let bg_color = '';
+    let text_color = 'text-light';
+    if(route.hasOwnProperty('is_active') && route.is_active === false) {
+        bg_color = 'bg-secondary';
+    }
+    else if(route.type === 'metro' && route.route_ref === 'M4') {
+        bg_color = 'M4-bg-color';
+        text_color = 'text-dark';
     }
     else if(route.type === 'metro') {
-        if(route.route_ref === 'M4') {
-            return `M4-bg-color text-dark`;
-        }
-        return `${route.route_ref}-bg-color`;
+        bg_color = `${route.route_ref}-bg-color`;
     }
-    return `${route.type}-bg-color`;
+    else {
+        bg_color = `${route.type}-bg-color`;
+    }
+    return `${bg_color} ${text_color}`;
 }
