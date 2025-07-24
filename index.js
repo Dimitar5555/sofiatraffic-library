@@ -29,3 +29,32 @@ export function determine_route_colour(route) {
     }
     return `${bg_color} ${text_color}`;
 }
+
+export function normalise_route(route) {
+    const overrides = [
+        {
+            old_type: 'trolley',
+            old_ref: '9А',
+            new_type: 'bus',
+            new_ref: '9'
+        },
+        {
+            old_type: 'bus',
+            old_ref: '9',
+            new_type: 'trolley'
+        }
+    ];
+
+    for(const override of overrides) {
+        if(route.type === override.old_type && route.route_ref === override.old_ref) {
+            if(override.hasOwnProperty('new_type')) {
+                route.type = override.new_type;
+            }
+            if(override.hasOwnProperty('new_ref')) {
+                route.route_ref = override.new_ref;
+            }
+            return true;
+        }
+    }
+    return false;
+}
