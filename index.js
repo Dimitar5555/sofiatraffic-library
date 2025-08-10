@@ -42,11 +42,6 @@ export function normalise_route(route) {
             old_type: 'bus',
             old_ref: '9А',
             new_ref: '9'
-        },
-        {
-            old_type: 'bus',
-            old_ref: '9',
-            new_type: 'trolley'
         }
     ];
 
