@@ -1,31 +1,42 @@
+:root {
+	--M1-M2-color: linear-gradient(to right, #ec2029 0%, #1077bc 100%) !important;
+	--M1-color: #ec2029 !important;
+	--M2-color: #1077bc !important;
+	--M3-color: #3bb44b !important;
+	--M4-color: #fcd403 !important;
+	--tram-color: #f6921e !important;
+	--trolley-color: #0095da !important;
+	--bus-color: #be1e2d !important;
+}
+
 .M1-2-bg-color {
-    background: linear-gradient(to right, #ec2029 0%, #1077bc 100%) !important;
+    background: var(--M1-M2-color) !important;
 }
 
 .M1-bg-color {
-	background-color: #ec2029 !important;
+	background-color: var(--M1-color) !important;
 }
 
 .M2-bg-color {
-	background-color: #1077bc !important;
+	background-color: var(--M2-color) !important;
 }
 
 .M3-bg-color {
-	background-color: #3bb44b !important;
+	background-color: var(--M3-color) !important;
 }
 
 .M4-bg-color {
-	background-color: #fcd403 !important;
+	background-color: var(--M4-color) !important;
 }
 
 .tram-bg-color {
-	background-color: #f6921e !important;
+	background-color: var(--tram-color) !important;
 }
 
 .trolley-bg-color {
-	background-color: #0095da !important;
+	background-color: var(--trolley-color) !important;
 }
 
 .bus-bg-color {
-	background-color: #be1e2d !important;
+	background-color: var(--bus-color) !important;
 }
