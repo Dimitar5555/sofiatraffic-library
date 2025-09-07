@@ -7,8 +7,8 @@ export const primary_route_types = [
 
 export const secondary_route_types = [
     'temporary',
-    'night',
-    'school'
+    'school',
+    'night'
 ];
 
 export function determine_route_colour(route) {
