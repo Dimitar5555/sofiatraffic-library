@@ -1,12 +1,13 @@
 :root {
-	--M1-M2-color: linear-gradient(to right, #ec2029 0%, #1077bc 100%) !important;
-	--M1-color: #ec2029 !important;
-	--M2-color: #1077bc !important;
-	--M3-color: #3bb44b !important;
-	--M4-color: #fcd403 !important;
-	--tram-color: #f6921e !important;
-	--trolley-color: #0095da !important;
-	--bus-color: #be1e2d !important;
+	--M1-M2-color: linear-gradient(to right, #ec2029 0%, #1077bc 100%);
+	--M1-color: #ec2029;
+	--M2-color: #1077bc;
+	--M3-color: #3bb44b;
+	--M4-color: #fcd403;
+	--tram-color: #f6921e;
+	--trolley-color: #0095da;
+	--bus-color: #be1e2d;
+	--night-color: #000;
 }
 
 .M1-2-bg-color {
@@ -39,4 +40,8 @@
 
 .bus-bg-color {
 	background-color: var(--bus-color) !important;
+}
+
+.night-bg-color {
+	background-color: var(--night-color) !important;
 }
