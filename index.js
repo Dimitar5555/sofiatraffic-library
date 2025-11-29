@@ -7,8 +7,8 @@ export const primary_route_types = [
 
 export const secondary_route_types = [
     'temporary',
-    'night',
-    'school'
+    'school',
+    'night'
 ];
 
 export function get_route_classes(type, route_ref, is_active=true) {
@@ -39,7 +39,8 @@ export function normalise_route(route) {
             old_type: 'trolley',
             old_ref: '9А',
             new_type: 'bus',
-            new_ref: '9'
+            new_ref: '9',
+            disabled: true
         },
         {
             old_type: 'bus',
@@ -49,6 +50,9 @@ export function normalise_route(route) {
     ];
 
     for(const override of overrides) {
+        if(override.disabled) {
+            continue;
+        }
         if(route.type === override.old_type && route.route_ref === override.old_ref) {
             if(override.hasOwnProperty('new_type')) {
                 route.type = override.new_type;
